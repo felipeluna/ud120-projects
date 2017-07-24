@@ -8,7 +8,7 @@ The course can be found [here](https://br.udacity.com/course/intro-to-machine-le
 ## Progress
 
 - [x] Naive Bayes
-- [ ] SVM
+- [x] SVM
 - [ ] Decision Trees
 - [ ] Choose Your Own Algorithm
 - [ ] Database and Questions
