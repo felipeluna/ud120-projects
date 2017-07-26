@@ -4,7 +4,10 @@ import matplotlib.pyplot as plt
 from prep_terrain_data import makeTerrainData
 from class_vis import prettyPicture
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.ensemble import AdaBoostClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
+
 features_train, labels_train, features_test, labels_test = makeTerrainData()
 
 
@@ -33,26 +36,34 @@ plt.show()
 ### visualization code (prettyPicture) to show you the decision boundary
 
 # knn
-
 clf = KNeighborsClassifier()
 clf = clf.fit(features_train, labels_train)
 
-predict = clf.predict(features_train)
-accuracy = accuracy_score(predict, labels_train)
-print "accuracy:", accuracy
+prediction = clf.predict(features_test)
+accuracy = accuracy_score(prediction, labels_test)
+print "accuracy knn:", accuracy
+
 # adaboost
+clf2 = AdaBoostClassifier()
+clf2 = clf2.fit(features_train, labels_train)
+prediction2 = clf2.predict(features_test)
+accuracy2 = accuracy_score(prediction2, labels_test)
+print "accuracy adaboost:", accuracy2
 
-
-
-
-
-
+# random forest
+clf3 = RandomForestClassifier()
+clf3 = clf3.fit(features_train, labels_train)
+prediction3 = clf3.predict(features_test)
+accuracy3 = accuracy_score(prediction3, labels_test)
+print "accuracy random forests:", accuracy3
 
 
 
 
 try:
     prettyPicture(clf, features_test, labels_test, "knn")
+    prettyPicture(clf2, features_test, labels_test, "adaboost")
+    prettyPicture(clf3, features_test, labels_test, "random forests")
 except NameError:
     print "error"
     pass
