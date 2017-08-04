@@ -11,7 +11,7 @@ The course can be found [here](https://br.udacity.com/course/intro-to-machine-le
 - [x] SVM
 - [x] Decision Trees
 - [x] Choose Your Own Algorithm
-- [ ] Database and Questions
+- [x] Database and Questions
 - [ ] Regressions
 - [ ] Outliers
 - [ ] Clustering
