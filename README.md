@@ -12,7 +12,7 @@ The course can be found [here](https://br.udacity.com/course/intro-to-machine-le
 - [x] Decision Trees
 - [x] Choose Your Own Algorithm
 - [x] Database and Questions
-- [ ] Regressions
+- [x] Regressions
 - [ ] Outliers
 - [ ] Clustering
 - [ ] Feature Scale
